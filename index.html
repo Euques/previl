@@ -1007,17 +1007,22 @@
 
 
 // Verifica se já existe uma tag meta 'og:image'
-    let metaTag = document.querySelector('meta[property="og:image"]');
+let metaTag = document.querySelector('meta[property="og:image"]');
 
-    if (!metaTag) {
-        // Se a tag não existir, cria uma nova
-        metaTag = document.createElement('meta');
-        metaTag.setAttribute('property', 'og:image');
-        document.head.appendChild(metaTag);
-    }
+if (!metaTag) {
+    // Se a tag não existir, cria uma nova
+    metaTag = document.createElement('meta');
+    metaTag.setAttribute('property', 'og:image');
+    document.head.appendChild(metaTag);
+}
 
+// Verifica se 'pega.flyer' está definida e contém um valor válido
+if (pega && pega.flyer) {
     // Atualiza o atributo 'content' da tag com a URL da imagem
     metaTag.setAttribute('content', pega.flyer);
+} else {
+    console.error("Erro: 'pega.flyer' não está definida ou está vazia.");
+}
 
 
 			
