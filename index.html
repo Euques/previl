@@ -10,6 +10,9 @@
 		<meta property="og:title" content="Vem Sambar Prime" />
 		<meta property="og:type" content="website" />
 		<meta property="og:description" content="Lista Promocional" />
+
+		<meta property="og:image" content="">
+		
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<meta name="theme-color" content="#000000" />
@@ -1001,23 +1004,14 @@
 		document
 		.querySelector('meta[property="og:title"]')
 		.setAttribute('content', pega.descricao)
+
+		document
+.querySelector('meta[property="og:image"]')
+.setAttribute('content', pega.flyer)
 		
 		
 		
 
-
-// Verifica se já existe uma tag meta 'og:image'
-let metaTag = document.querySelector('meta[property="og:image"]');
-
-if (!metaTag) {
-    // Se a tag não existir, cria uma nova
-    metaTag = document.createElement('meta');
-    metaTag.setAttribute('property', 'og:image');
-    document.head.appendChild(metaTag);
-}
-
-// Atualiza o atributo 'content' da tag com a URL da imagem
-metaTag.setAttribute('content', 'https://firebasestorage.googleapis.com/v0/b/blacknight-600de.appspot.com/o/vemsambar%2Feventos%2F-O7osmWW6Mk-XZN5jsmX%2Fflyer?alt=media&token=c44ceb13-efb2-4f50-90d2-7d0d7004df53');
 
 
 
