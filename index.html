@@ -1006,8 +1006,8 @@
 		
 
 
-			// Cria o tumbnail
-			function addOrUpdateMetaTagOgImage(imageUrl) {
+// Função para criar ou atualizar a tag meta 'og:image'
+function addOrUpdateMetaTagOgImage(imageUrl) {
     // Verifica se já existe uma tag meta 'og:image'
     let metaTag = document.querySelector('meta[property="og:image"]');
 
@@ -1018,11 +1018,11 @@
         document.head.appendChild(metaTag);
     }
 
-    // Se a tag já existir ou foi criada, atualiza o atributo 'content'
+    // Atualiza o atributo 'content' da tag com a URL da imagem
     metaTag.setAttribute('content', imageUrl);
 }
 
-// Exemplo de uso
+// Exemplo de uso com o valor de pega.flyer
 addOrUpdateMetaTagOgImage(pega.flyer);
 
 
