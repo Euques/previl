@@ -1008,6 +1008,29 @@
 		document
 		.querySelector('meta[property="og:url"]')
 		.setAttribute('content', url)
+
+
+			// Cria o tumbnail
+			function addOrUpdateMetaTagOgImage(imageUrl) {
+    // Verifica se já existe uma tag meta 'og:image'
+    let metaTag = document.querySelector('meta[property="og:image"]');
+
+    if (!metaTag) {
+        // Se a tag não existir, cria uma nova
+        metaTag = document.createElement('meta');
+        metaTag.setAttribute('property', 'og:image');
+        document.head.appendChild(metaTag);
+    }
+
+    // Se a tag já existir ou foi criada, atualiza o atributo 'content'
+    metaTag.setAttribute('content', imageUrl);
+}
+
+// Exemplo de uso
+addOrUpdateMetaTagOgImage(pega.flyer);
+
+
+			
 		
 		// Função para converter o timestamp
 		function converterTimestamp(timestamp) {
