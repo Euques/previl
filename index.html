@@ -1007,7 +1007,7 @@
 
 
 // Função para criar ou atualizar a tag meta 'og:image'
-function addOrUpdateMetaTagOgImage(imageUrl) {
+function addOrUpdateMetaTagOgImage(pega.flyer) {
     // Verifica se já existe uma tag meta 'og:image'
     let metaTag = document.querySelector('meta[property="og:image"]');
 
@@ -1023,7 +1023,7 @@ function addOrUpdateMetaTagOgImage(imageUrl) {
 }
 
 // Exemplo de uso com o valor de pega.flyer
-addOrUpdateMetaTagOgImage(pega.flyer);
+addOrUpdateMetaTagOgImage();
 
 
 			
